@@ -95,13 +95,13 @@ class RangeSelector extends React.Component {
 }
 
 const RangeSelectorItem = props => {
-  const { id, children } = props;
+  const { index, children } = props;
   return (
     <Consumer>
       {({ select, isSelected }) =>
         children({
-          select: () => select(id),
-          isSelected: () => isSelected(id)
+          select: () => select(index),
+          isSelected: () => isSelected(index)
         })
       }
     </Consumer>
