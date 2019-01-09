@@ -1,6 +1,6 @@
 {
   "name": "react-range-selector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
   "homepage": "https://github.com/tatchi/react-range-selector",
   "repository": "git@github.com:tatchi/react-range-selector.git",
