@@ -1,12 +1,19 @@
 {
   "name": "react-range-selector",
-  "version": "0.1.1",
-  "main": "src/index.js",
+  "version": "0.1.2",
+  "main": "dist/react-range-selector.js",
+  "umd:main": "dist/react-range-selector.umd.js",
+  "module": "dist/react-range-selector.m.js",
+  "source": "src/index.js",
   "homepage": "https://github.com/tatchi/react-range-selector",
   "repository": "git@github.com:tatchi/react-range-selector.git",
   "author": "Corentin Leruth <Corentin.Leruth@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "microbundle -o dist/"
+  },
   "devDependencies": {
+    "microbundle": "^0.9.0",
     "react": "^16.7.0"
   }
 }
