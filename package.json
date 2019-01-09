@@ -1,0 +1,12 @@
+{
+  "name": "react-range-selector",
+  "version": "0.1",
+  "main": "src/index.js",
+  "homepage": "https://github.com/tatchi/react-range-selector",
+  "repository": "git@github.com:tatchi/react-range-selector.git",
+  "author": "Corentin Leruth <Corentin.Leruth@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.7.0"
+  }
+}
