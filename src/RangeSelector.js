@@ -2,7 +2,6 @@ import React from "react";
 const { Provider, Consumer } = React.createContext();
 
 class RangeSelector extends React.Component {
-  static Item = RangeSelectorItem;
   select = indexe => {
     this.setState(({ selectedIndexes: prevSelectedIndexes }) => {
       let newSelectedIndexes = [...prevSelectedIndexes];
@@ -108,4 +107,4 @@ const RangeSelectorItem = props => {
   );
 };
 
-export { RangeSelector };
+export { RangeSelector, RangeSelectorItem };
