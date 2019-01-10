@@ -1,6 +1,6 @@
 {
   "name": "react-range-selector",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/react-range-selector.js",
   "umd:main": "dist/react-range-selector.umd.js",
   "module": "dist/react-range-selector.m.js",
