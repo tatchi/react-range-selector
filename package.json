@@ -10,14 +10,10 @@
   "author": "Corentin Leruth <Corentin.Leruth@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "microbundle -o dist/ --compress false --sourcemap false --jsx React.createElement"
+    "build": "microbundle -o dist/ --sourcemap false --jsx React.createElement",
+    "watch": "microbundle watch -o dist/ --compress false --jsx React.createElement"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
     "microbundle": "^0.9.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"

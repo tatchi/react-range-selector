@@ -3,6 +3,7 @@ const { Provider, Consumer } = React.createContext();
 
 class RangeSelector extends React.Component {
   select = indexe => {
+    console.log("select82");
     this.setState(({ selectedIndexes: prevSelectedIndexes }) => {
       let newSelectedIndexes = [...prevSelectedIndexes];
       const inAlreadyExistingIndex = prevSelectedIndexes.findIndex(
