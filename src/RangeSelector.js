@@ -1,7 +1,22 @@
 import React from "react";
 const { Provider, Consumer } = React.createContext();
 
+const RangeSelectorItem = props => {
+  const { index, children } = props;
+  return (
+    <Consumer>
+      {({ select, isSelected }) =>
+        children({
+          select: () => select(index),
+          isSelected: () => isSelected(index)
+        })
+      }
+    </Consumer>
+  );
+};
+
 class RangeSelector extends React.Component {
+  static Item = RangeSelectorItem;
   select = indexe => {
     this.setState(({ selectedIndexes: prevSelectedIndexes }) => {
       let newSelectedIndexes = [...prevSelectedIndexes];
@@ -93,18 +108,4 @@ class RangeSelector extends React.Component {
   }
 }
 
-const RangeSelectorItem = props => {
-  const { index, children } = props;
-  return (
-    <Consumer>
-      {({ select, isSelected }) =>
-        children({
-          select: () => select(index),
-          isSelected: () => isSelected(index)
-        })
-      }
-    </Consumer>
-  );
-};
-
-export { RangeSelector, RangeSelectorItem };
+export { RangeSelector };
