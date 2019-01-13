@@ -15,8 +15,23 @@ const RangeSelectorItem = props => {
   );
 };
 
+const RangeSelectorMeta = props => {
+  const { children } = props;
+  console.log(props);
+  return (
+    <Consumer>
+      {({ selectedIndexes }) =>
+        children({
+          selectedIndexes
+        })
+      }
+    </Consumer>
+  );
+};
+
 class RangeSelector extends React.Component {
   static Item = RangeSelectorItem;
+  static Meta = RangeSelectorMeta;
   select = indexe => {
     this.setState(({ selectedIndexes: prevSelectedIndexes }) => {
       let newSelectedIndexes = [...prevSelectedIndexes];
@@ -98,7 +113,7 @@ class RangeSelector extends React.Component {
   };
 
   state = {
-    selectedIndexes: [[]],
+    selectedIndexes: this.props.defaultValue || [[]],
     select: this.select,
     isSelected: this.isSelected
   };
